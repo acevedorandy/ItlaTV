@@ -1,0 +1,37 @@
+﻿@model ItlaTV.Persistance.Models.dbo.GenerosModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-danger text-white">
+            <h4 class="mb-0">Delete Género</h4>
+        </div>
+        <div class="card-body">
+            <h5 class="text-center text-danger">¿Estás seguro de que deseas eliminar este género?</h5>
+            <hr />
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <dl class="row">
+                        <dt class="col-sm-4 font-weight-bold">ID:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.GeneroID)</dd>
+
+                        <dt class="col-sm-4 font-weight-bold">Nombre:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Nombre)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <form asp-action="Delete" method="post">
+                <input type="hidden" asp-for="GeneroID" />
+                <input type="hidden" asp-for="Nombre" />
+
+                <button type="submit" class="btn btn-danger px-4">Delete</button>
+                <a asp-action="Index" class="btn btn-secondary px-4">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

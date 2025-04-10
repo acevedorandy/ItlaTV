@@ -1,0 +1,42 @@
+﻿@model ItlaTV.Domain.Entities.dbo.Generos
+
+@{
+    ViewData["Title"] = "Crear Género";
+}
+
+<h1 class="text-center text-primary">Add Género</h1>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg rounded p-4">
+                <div class="card-body">
+                    <h4 class="text-center text-secondary">📝 Datos del Género</h4>
+                    <hr />
+
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label asp-for="Nombre" class="fw-bold"></label>
+                            <input asp-for="Nombre" class="form-control" placeholder="Ingrese el nombre del género..." />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <input type="submit" value="➕ Add" class="btn btn-success px-4" />
+                            <a asp-action="Index" class="btn btn-secondary">🔙 Back</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

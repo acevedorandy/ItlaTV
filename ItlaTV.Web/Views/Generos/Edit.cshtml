@@ -1,0 +1,46 @@
+﻿@model ItlaTV.Persistance.Models.dbo.GenerosModel
+
+@{
+    ViewData["Title"] = "Editar Género";
+}
+
+<h1 class="text-center text-primary">Género Edit</h1>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg rounded p-4">
+                <div class="card-body">
+                    <h4 class="text-center text-secondary">Edit Genero</h4>
+                    <hr />
+
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="GeneroID" class="fw-bold">🆔 ID</label>
+                            <input asp-for="GeneroID" class="form-control" readonly />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Nombre" class="fw-bold">🏷 Nombre</label>
+                            <input asp-for="Nombre" class="form-control" />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <button type="submit" class="btn btn-success px-4">💾 Save</button>
+                            <a asp-action="Index" class="btn btn-secondary">🔙 Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

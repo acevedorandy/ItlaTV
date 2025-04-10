@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItlaTV.Domain", "ItlaTV\ItlaTV.Domain.csproj", "{03AF5E5A-869D-438F-8C22-7570BBA98EA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{2A48F7B7-1305-44FC-8DEF-17383E28990A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{6376111F-6131-4724-AA95-47F95A84229F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItlaTV.Persistance", "ItlaTV.Persistance\ItlaTV.Persistance.csproj", "{EDB0E908-2ACE-43E5-9531-72C73C209197}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItlaTV.Web", "ItlaTV.Web\ItlaTV.Web.csproj", "{F0F362DD-FE22-4DAA-8E11-0603CF0BAD9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItlaTV.IOC", "ItlaTV.IOC\ItlaTV.IOC.csproj", "{3C9DA88C-8526-4E29-8269-05971675AF9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03AF5E5A-869D-438F-8C22-7570BBA98EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03AF5E5A-869D-438F-8C22-7570BBA98EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03AF5E5A-869D-438F-8C22-7570BBA98EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03AF5E5A-869D-438F-8C22-7570BBA98EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB0E908-2ACE-43E5-9531-72C73C209197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB0E908-2ACE-43E5-9531-72C73C209197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB0E908-2ACE-43E5-9531-72C73C209197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB0E908-2ACE-43E5-9531-72C73C209197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0F362DD-FE22-4DAA-8E11-0603CF0BAD9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F362DD-FE22-4DAA-8E11-0603CF0BAD9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F362DD-FE22-4DAA-8E11-0603CF0BAD9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F362DD-FE22-4DAA-8E11-0603CF0BAD9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9DA88C-8526-4E29-8269-05971675AF9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9DA88C-8526-4E29-8269-05971675AF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9DA88C-8526-4E29-8269-05971675AF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9DA88C-8526-4E29-8269-05971675AF9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03AF5E5A-869D-438F-8C22-7570BBA98EA1} = {2A48F7B7-1305-44FC-8DEF-17383E28990A}
+		{EDB0E908-2ACE-43E5-9531-72C73C209197} = {2A48F7B7-1305-44FC-8DEF-17383E28990A}
+		{F0F362DD-FE22-4DAA-8E11-0603CF0BAD9F} = {6376111F-6131-4724-AA95-47F95A84229F}
+		{3C9DA88C-8526-4E29-8269-05971675AF9F} = {2A48F7B7-1305-44FC-8DEF-17383E28990A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBD8E64F-805A-44BA-99EB-71C4204D3BF1}
+	EndGlobalSection
+EndGlobal

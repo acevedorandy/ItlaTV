@@ -1,0 +1,77 @@
+﻿@model ItlaTV.Domain.Entities.dbo.Series
+
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center text-success">📺 Add Serie</h1>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg rounded p-4">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Nombre" class="form-label fw-bold">🎬 Nombre de la Serie</label>
+                            <input asp-for="Nombre" class="form-control" placeholder="Ingrese el nombre de la serie" />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ImagenPortada" class="form-label fw-bold">🖼 Imagen de Portada</label>
+                            <input asp-for="ImagenPortada" class="form-control" placeholder="URL de la imagen" oninput="previewImage(this.value)" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="EnlaceVideo" class="form-label fw-bold">📺 Enlace del Video</label>
+                            <input asp-for="EnlaceVideo" class="form-control" placeholder="Pegue el enlace de YouTube" />
+                            <span asp-validation-for="EnlaceVideo" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ProductoraID" class="form-label fw-bold">🏢 Productora</label>
+                            <select asp-for="ProductoraID" asp-items="@ViewBag.Productoras" class="form-control"></select>
+                            <span asp-validation-for="ProductoraID" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="GeneroPrimarioID" class="form-label fw-bold">🎭 Género Primario</label>
+                              <select asp-for="GeneroPrimarioID" asp-items="@ViewBag.Generos" class="form-control"></select>
+                               <span asp-validation-for="GeneroPrimarioID" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                            <label for="chkGeneroSecundario" class="form-label fw-bold">🎭 Género Secundario <span style="font-size: smaller; color: dimgrey;">(Opcional)</span></label>
+                            <input type="checkbox" id="chkGeneroSecundario" class="form-check-input">
+                        </div>
+
+                        <div class="mb-3">
+                          <select asp-for="GeneroSecundarioID" asp-items="@ViewBag.Generos" class="form-control" disabled>
+                                <option value="">Seleccione un género</option>
+                            </select>
+                            <span asp-validation-for="GeneroSecundarioID" class="text-danger"></span>
+                        </div>
+
+                        <script>
+                            document.getElementById("chkGeneroSecundario").addEventListener("change", function () {
+                                document.getElementById("GeneroSecundarioID").disabled = !this.checked;
+                            });
+                        </script>
+
+
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-success px-4">✅ Add</button>
+                            <a asp-action="Index" class="btn btn-secondary">🔙 Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

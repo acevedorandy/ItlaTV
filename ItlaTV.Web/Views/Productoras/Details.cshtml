@@ -1,0 +1,45 @@
+﻿@model ItlaTV.Persistance.Models.dbo.ProductorasModel
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1 class="text-center text-primary">🏭 Productora Details</h1>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg rounded p-4">
+                <div class="card-body">
+                    <h4 class="text-center text-secondary">Productora Details</h4>
+                    <hr />
+
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold">🆔 ID</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.ProductoraID)</dd>
+
+                        <dt class="col-sm-4 fw-bold">🏷 Nombre</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Nombre)</dd>
+
+                        <dt class="col-sm-4 fw-bold">🖼 Logo</dt>
+                        <dd class="col-sm-8">
+                            @if (Model != null && !string.IsNullOrEmpty(Model.LogoURL))
+                            {
+                                <img src="@Model.LogoURL" class="img-thumbnail" width="150" onerror="this.src='https://via.placeholder.com/150';">
+                            }
+                            else
+                            {
+                                <img src="/images/placeholder.png" class="img-thumbnail" width="150" height="150" alt="Imagen no disponible" />
+                            }
+                        </dd>
+                    </dl>
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <a asp-action="Edit" asp-route-id="@Model?.ProductoraID" class="btn btn-warning px-4">✏️ Edit</a>
+                        <a asp-action="Index" class="btn btn-secondary">🔙 Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
